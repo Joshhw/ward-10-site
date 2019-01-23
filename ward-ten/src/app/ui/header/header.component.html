@@ -9,31 +9,35 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            true}" >Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" href="#">About Us</a>
+          <a class="nav-link disabled" routerLink="about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            true}">About Us</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" routerLink="membership" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            true}">Membership</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" href="#">Membership</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" routerLinkActive="active" href="#">Events</a>
+          <a class="nav-link disabled" routerLink="events" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+            true}">Events</a>
         </li>
       </ul>
       <ul class="navbar-nav ml-auto flex-row">
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" href="#">
+          <a class="nav-link" >
             <i class="fa fa-facebook"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link pl-sm-1" routerLinkActive="active" href="#">
+          <a class="nav-link pl-sm-1" >
             <i class="fa fa-facebook"></i>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link pl-sm-1" routerLinkActive="active" href="#">
+          <a class="nav-link pl-sm-1" >
             <i class="fa fa-facebook"></i>
           </a>
         </li>
