@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { UiModule } from './ui/ui.module';
 import { CommitteeModule } from './committee/committee.module';
 import { HomeModule } from './home/home.module';
+import { CalendarModule } from './calendar/calendar.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { HomeModule } from './home/home.module';
     // BrowserAnimationsModule,
     UiModule, // new modules added here
     CommitteeModule, 
+    CalendarModule,
+    HttpClientModule,
     HomeModule
   ],
   providers: [],

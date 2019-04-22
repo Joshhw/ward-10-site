@@ -1,0 +1,13 @@
+<h3>Upcoming Events</h3> 
+<b><hr style="border: none; border-bottom: 4px solid black;"></b>
+<div *ngIf="calendarEvents">
+  <div *ngFor="let event of calendarEvents">
+  <h5><b>{{event.summary}}</b></h5>
+  <h6>Where: {{event.location}}</h6>
+  <h6>Thigns</h6>  
+  <p>{{event.description}}</p>
+    <hr>
+    <br>
+  </div>
+
+</div>
