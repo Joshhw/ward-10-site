@@ -20,14 +20,14 @@ export interface CalendarEvent {
 })
 export class EventsComponent implements OnInit {
   calendarEvents: CalendarEvent[];
+  loading = true;
 
-  constructor(private gService: GoogleService) { }
+  constructor(private gService: GoogleService) {}
 
   ngOnInit() {
     this.gService.getEvents().subscribe((data: CalendarEvent[]) => {
+      this.loading = false;
       this.calendarEvents = data;
-    })
-
+    });
   }
-
 }
