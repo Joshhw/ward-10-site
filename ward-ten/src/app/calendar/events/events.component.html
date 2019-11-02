@@ -1,25 +1,24 @@
-<h3 class="pl-1 mx-lg-5 mt-3 event-headline rounded">Upcoming Events</h3> 
+<h3 class="pl-1 mx-lg-5 mt-3 event-headline rounded">Upcoming Events</h3>
 
 <div class="mx-lg-5" *ngIf="calendarEvents">
   <div *ngFor="let event of calendarEvents">
     <div class="card">
       <div class="card-header">
         <div class="row">
-        <div class="pl-lg-3 mr-auto">
-            {{event.summary}}
+          <div class="pl-lg-3 mr-auto">
+            {{ event.summary }}
+          </div>
+          <div class="ml-auto pr-lg-3">
+            {{ event.start.dateTime | date: 'medium' }}
+          </div>
         </div>
-        <div class="ml-auto pr-lg-3">
-            {{event.start.dateTime | date:"medium"}}
-        </div>
-      </div>
       </div>
       <div class="card-body">
-        <h6 class="card-title">Where: {{event.location}}</h6>
-        <p class="card-text">{{event.description}}</p>
-        <a [href]="event.htmlLink" target="_blank"><i class="fa fa-calendar-plus-o fa-2x" aria-hidden="true"></i></a>
+        <h6 class="card-title">Where: {{ event.location }}</h6>
+        <p class="card-text" [innerHTML]="event.description"></p>
+        <a [href]="event.link" target="_blank"><i class="fa fa-calendar-plus-o fa-2x" aria-hidden="true"></i></a>
       </div>
     </div>
-    <br>
-      </div>
-
+    <br />
+  </div>
 </div>
