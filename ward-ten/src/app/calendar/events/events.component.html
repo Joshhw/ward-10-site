@@ -4,6 +4,9 @@
     <span class="sr-only">Loading...</span>
   </div>
 </div>
+<div class="mx-lg-5" *ngIf="calendarEvents.length == 0 && !loading">
+  <span>There are currently no events, please check back another day or join our mailing list</span>
+</div>
 <div class="mx-lg-5" *ngIf="calendarEvents">
   <div *ngFor="let event of calendarEvents">
     <div class="card">
