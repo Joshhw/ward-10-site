@@ -3,42 +3,31 @@
     <a class="navbar-brand" href="#">
       <img src="../assets/images/wardicon.png" width="60" height="50" alt="democratic party" />
     </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            >Home <span class="sr-only">(current)</span></a
-          >
+          <a class="nav-link" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home
+            <span class="sr-only">(current)</span></a>
         </li>
-        <!-- <li class="nav-item">
-          <a
-            class="nav-link disabled"
-            routerLink="about us"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >About us</a
-          >
-        </li> -->
         <li class="nav-item">
-          <a class="nav-link" routerLink="events" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-            >Events</a
-          >
+          <a class="nav-link" routerLink="events" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Events</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="committee" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">What is a ward?</a>
         </li>
         <li class="nav-item ">
-          <a target="_blank" class="nav-link" href="https://www.sec.state.ma.us/wheredoivotema/bal/myelectioninfo.aspx"
-            >Where to vote</a
-          >
+          <a target="_blank" class="nav-link"
+            href="https://www.sec.state.ma.us/wheredoivotema/bal/myelectioninfo.aspx">Where to vote</a>
+        </li>
+        <li class="nav-item ">
+          <a target="_blank" class="nav-link"
+            href="https://www.sec.state.ma.us/VoterRegistrationSearch/MyVoterRegStatus.aspx">Voter status</a>
         </li>
       </ul>
       <!-- remember to reorder in the mobile view to use pl-sm-1 for padding left 1em -->
