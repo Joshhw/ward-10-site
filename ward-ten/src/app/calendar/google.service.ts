@@ -8,10 +8,10 @@ import { CalendarEvent } from './events/events.component';
   providedIn: 'root'
 })
 export class GoogleService {
-  eventUrl = 'https://mzx25jawcg.execute-api.us-east-1.amazonaws.com/dev/events';
+  eventUrl = 'https://d8f0km9es4.execute-api.us-east-1.amazonaws.com/dev/events';
   private cache$: Observable<Array<CalendarEvent>>;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getEvents() {
     if (!this.cache$) {

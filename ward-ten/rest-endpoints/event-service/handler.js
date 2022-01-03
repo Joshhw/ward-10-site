@@ -9,18 +9,18 @@ module.exports.getEvents = async (event, context, callback) => {
     method: 'GET',
     uri: 'https://www.googleapis.com/calendar/v3/calendars/bostonward10%40gmail.com/events',
     qs: {
-      key : process.env.API_KEY,
+      key: process.env.API_KEY,
       orderBy: 'startTime',
       singleEvents: true,
       timeMax: yearLater,
       timeMin: now
     },
-    json:true
+    json: true
   }
 
 
   await request(options)
-    .then(function(res) {
+    .then(function (res) {
       console.log("request object:" + JSON.stringify(res))
       let eventList = res;
 
@@ -33,8 +33,9 @@ module.exports.getEvents = async (event, context, callback) => {
         body: JSON.stringify({
           data: eventList.items,
         }, null, 2)
-    })})
-    .catch( function(err) {
+      })
+    })
+    .catch(function (err) {
       console.log("we got an error");
       callback(err, {
         statusCode: 400,
@@ -46,7 +47,7 @@ module.exports.getEvents = async (event, context, callback) => {
           error: err,
         }, null, 2),
       }
-    );
+      );
     });
   // Use this code if you don't use the http event with the LAMBDA-PROXY integration
   // return { message: 'Go Serverless v1.0! Your function executed successfully!', event };
