@@ -1,5 +1,12 @@
 .event-headline {
-    background-color: #4197CD;
-    color: white;
-    font-family: 'PT Sans Narrow', sans-serif;
+  background-color: #4197cd;
+  color: white;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+img {
+  padding: 0.5rem 0;
+  max-width: 100%;
+  height: auto;
+  width: auto\9; /* ie8 */
 }

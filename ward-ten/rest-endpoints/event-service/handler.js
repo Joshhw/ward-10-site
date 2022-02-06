@@ -4,7 +4,21 @@ const request = require('request-promise')
 module.exports.getEvents = async (event, context, callback) => {
   let now = new Date();
   let yearLater = new Date(new Date().setFullYear(now.getFullYear() + 1))
+  let allowedSites = ["https://www.ward10dems.org", "www.ward10dems.org", "https://ward10dems.org"]
   let originHeader = event['headers']['origin']
+  console.log("origin header:", originHeader)
+  if (!allowedSites.includes(originHeader)) {
+    callback(null, {
+      statusCode: 401,
+      headers: {
+        'Access-Control-Allow-Origin': originHeader,
+        'Access-Control-Allow-Credentials': true,
+      },
+      body: JSON.stringify({
+        error: "not authorized",
+      }, null, 2),
+    })
+  }
   const options = {
     method: 'GET',
     uri: 'https://www.googleapis.com/calendar/v3/calendars/bostonward10%40gmail.com/events',
@@ -21,9 +35,7 @@ module.exports.getEvents = async (event, context, callback) => {
 
   await request(options)
     .then(function (res) {
-      console.log("request object:" + JSON.stringify(res))
       let eventList = res;
-
       callback(null, {
         statusCode: 200,
         headers: {
