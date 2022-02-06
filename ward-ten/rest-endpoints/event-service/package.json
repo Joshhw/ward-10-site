@@ -12,5 +12,10 @@
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "serverless": "^2.70.0"
+  },
+  "devDependencies": {
+    "simple-get": ">=2.8.2",
+    "node-fetch": ">=2.6.7",
+    "ansi-regex": ">=5.0.1"
   }
 }
