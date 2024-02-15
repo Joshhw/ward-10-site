@@ -75,18 +75,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ward-ten:build"
+            "buildTarget": "ward-ten:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ward-ten:build:production"
+              "buildTarget": "ward-ten:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ward-ten:build"
+            "buildTarget": "ward-ten:build"
           }
         },
         "test": {
