@@ -11,11 +11,11 @@
   "dependencies": {
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
-    "serverless": "^2.70.0"
+    "serverless": "^4.7.0"
   },
   "devDependencies": {
-    "simple-get": ">=2.8.2",
-    "node-fetch": ">=2.6.7",
-    "ansi-regex": ">=5.0.1"
+    "simple-get": ">=4.0.1",
+    "node-fetch": ">=3.3.2",
+    "ansi-regex": ">=6.1.0"
   }
 }
