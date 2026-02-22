@@ -6,22 +6,15 @@ import { UiModule } from './ui/ui.module';
 import { CommitteeModule } from './committee/committee.module';
 import { HomeModule } from './home/home.module';
 import { CalendarModule } from './calendar/calendar.module';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    UiModule, // new modules added here
-    CommitteeModule,
-    CalendarModule,
-    HttpClientModule,
-    HomeModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        UiModule, // new modules added here
+        CommitteeModule,
+        CalendarModule,
+        HomeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule { }
