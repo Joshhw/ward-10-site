@@ -40,7 +40,7 @@ jobs:
       # 5. Copy to S3 bucket.
       - name: Copy to S3 Bucket
         run: |
-          aws s3 sync ward-ten/dist/browser s3://ward10dems.org/
+          aws s3 sync ward-ten/ward-ten/dist/browser s3://ward10dems.org/
       # 6. (Optional) Invalidate CloudFront
       - name: Invalidate CloudFront
         run: |
