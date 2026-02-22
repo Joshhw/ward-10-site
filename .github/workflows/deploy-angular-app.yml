@@ -42,8 +42,11 @@ jobs:
         run: |
           cd ward-ten
           ls
+          echo "dist check"
           ls dist
-          aws s3 sync dist/browser s3://ward10dems.org/
+          cd dist
+          ls
+          # aws s3 sync dist/browser s3://ward10dems.org/
       # 6. (Optional) Invalidate CloudFront
       - name: Invalidate CloudFront
         run: |
