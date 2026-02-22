@@ -40,14 +40,9 @@ jobs:
       # 5. Copy to S3 bucket.
       - name: Copy to S3 Bucket
         run: |
-          cd ward-ten
-          ls
-          echo "dist check"
-          ls dist
-          cd dist
-          ls
-          # aws s3 sync dist/browser s3://ward10dems.org/
+          cd ward-ten/dist
+          aws s3 sync ward-ten/browser s3://ward10dems.org/
       # 6. (Optional) Invalidate CloudFront
-      - name: Invalidate CloudFront
-        run: |
-          aws cloudfront create-invalidation --distribution-id E2PJ9CQUO2MZZI --paths "/*"
+      # - name: Invalidate CloudFront
+      #   run: |
+      #     aws cloudfront create-invalidation --distribution-id E2PJ9CQUO2MZZI --paths "/*"
