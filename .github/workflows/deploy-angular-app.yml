@@ -37,6 +37,10 @@ jobs:
           npm install -g @angular/cli
           npm install
           ng build --configuration production
+          ls 
+          ls dist
+          ls dist/ward-ten
+          ls dist/ward-ten/browser
 
       # 5. Copy to S3 bucket.
       - name: Copy to S3 Bucket
