@@ -45,6 +45,13 @@ jobs:
       # 5. Copy to S3 bucket.
       - name: Copy to S3 Bucket
         run: |
+          pwd
+          echo "ls current folder"
+          ls 
+          echo "ls dist folder"
+          ls dist
+
+
           aws s3 sync ./dist/ward-ten/browser s3://ward10dems.org/
 
       # 6. (Optional) Invalidate CloudFront
