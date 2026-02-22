@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: "25.3.0"
 
-      # 5. Build Angular
+      # 4. Build Angular
       - name: Build Angular Application
         run: |
           cd ward-ten
@@ -38,12 +38,12 @@ jobs:
           npm install
           ng build --configuration production
 
-      # 6. Copy to S3 bucket.
+      # 5. Copy to S3 bucket.
       - name: Copy to S3 Bucket
         run: |
-          aws s3 sync dist/ward-ten s3://ward10dems.org/
+          aws s3 sync ./dist/ward-ten/browser s3://ward10dems.org/
 
-      # 7. (Optional) Invalidate CloudFront
+      # 6. (Optional) Invalidate CloudFront
       - name: Invalidate CloudFront
         run: |
           aws cloudfront create-invalidation --distribution-id E2PJ9CQUO2MZZI --paths "/*"
